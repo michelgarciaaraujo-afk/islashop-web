@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IslaShop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      padding: 15px;
+    }
+    .product {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    }
+    .product h3 {
+      margin: 0 0 10px;
+    }
+    .price {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🛒 IslaShop</h1>
+  <p>Pagos en MLC • CUP • USD • Transferencia</p>
+</header>
+
+<div class="container">
+
+  <div class="product">
+    <h3>Producto 1</h3>
+    <div class="price">Precio: 10 USD / MLC / CUP</div>
+    <button onclick="order('Producto 1')">Comprar por WhatsApp</button>
+  </div>
+
+  <div class="product">
+    <h3>Producto 2</h3>
+    <div class="price">Precio: 20 USD / MLC / CUP</div>
+    <button onclick="order('Producto 2')">Comprar por WhatsApp</button>
+  </div>
+
+</div>
+
+<footer>
+  © IslaShop - Ventas por WhatsApp
+</footer>
+
+<script>
+  function order(product) {
+    const phone = "5356641391";
+    const msg = encodeURIComponent("Hola, quiero comprar: " + product);
+    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+  }
+</script>
+
+</body>
+</html>
 # islashop-web
